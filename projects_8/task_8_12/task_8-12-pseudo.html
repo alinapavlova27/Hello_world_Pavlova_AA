@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Псевдоклассы CSS - Путешествия</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f0f2f5;
+        }
+        
+        ol {
+            background: white;
+            padding: 20px 20px 20px 40px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        li:first-child {
+            color: #1a73e8;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        li:last-child {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        
+        li:nth-child(3n) {
+            background: #e0eaff;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        
+        li:not(:first-child) {
+            border-top: 1px solid #ddd;
+            margin-top: 5px;
+            padding-top: 5px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        th {
+            background: #1a73e8;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #e8f0fe;
+        }
+        
+        a {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 8px 12px;
+            background: white;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #1a73e8;
+        }
+        
+        a:hover {
+            background: #1a73e8;
+            color: white;
+        }
+        
+        a[href$=".pdf"] {
+            color: #e63946;
+            border: 1px solid #e63946;
+        }
+        
+        a[href$=".pdf"]:hover {
+            background: #e63946;
+            color: white;
+        }
+        
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        input:focus {
+            border-color: #1a73e8;
+            outline: none;
+            box-shadow: 0 0 5px rgba(26,115,232,0.5);
+        }
+        
+        input:required {
+            background: #fff5e0;
+        }
+        
+        button {
+            background: #2e7d32;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background: #1b5e20;
+        }
+    </style>
+</head>
+<body>
+
+<h1>📸 Практика с псевдоклассами - Путешествия</h1>
+
+<h2>🌍 ТОП-6 мест для путешествий</h2>
+<ol>
+    <li>Италия (Рим, Венеция, Флоренция)</li>
+    <li>Франция (Париж, Лазурный берег)</li>
+    <li>Япония (Токио, Киото, Осака)</li>
+    <li>Турция (Стамбул, Каппадокия)</li>
+    <li>Таиланд (Пхукет, Краби)</li>
+    <li>Исландия (Северное сияние, гейзеры)</li>
+</ol>
+
+<h2>✈️ Список стран и столиц</h2>
+<table>
+    <thead>
+        <tr><th>Страна</th><th>Столица</th><th>Лучший сезон</th><th>Популярность</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>🇮🇹 Италия</td><td>Рим</td><td>апрель-июнь</td><td>★★★★★</td></tr>
+        <tr><td>🇫🇷 Франция</td><td>Париж</td><td>май-сентябрь</td><td>★★★★★</td></tr>
+        <tr><td>🇯🇵 Япония</td><td>Токио</td><td>март-апрель</td><td>★★★★☆</td></tr>
+        <tr><td>🇹🇷 Турция</td><td>Анкара</td><td>апрель-октябрь</td><td>★★★★☆</td></tr>
+        <tr><td>🇹🇭 Таиланд</td><td>Бангкок</td><td>ноябрь-февраль</td><td>★★★★★</td></tr>
+        <tr><td>🇮🇸 Исландия</td><td>Рейкьявик</td><td>июнь-август</td><td>★★★☆☆</td></tr>
+    </tbody>
+</table>
+
+<h2>🔗 Полезные ссылки для путешественников</h2>
+<p>
+    <a href="about.html">📖 О проекте (внутренняя ссылка)</a>
+    <a href="https://www.aviasales.ru" target="_blank">✈️ Aviasales (внешняя ссылка)</a>
+    <a href="https://media.kasperskycontenthub.com/wp-content/uploads/sites/20/2015/11/07002607/top-100-must-see-rus1.pdf" target="_blank">📄 Скачать путеводитель по России (PDF)</a>
+</p>
+
+<h2>📩 Подписка на туристическую рассылку</h2>
+<form>
+    <input type="text" placeholder="Ваше имя">
+    <input type="email" placeholder="Ваш email" required>
+    <button type="submit">Подписаться</button>
+</form>
+
+</body>
+</html>

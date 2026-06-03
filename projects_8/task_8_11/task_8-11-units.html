@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Эксперимент с единицами измерения</title>
+    <style>
+        /* Общие стили для страницы */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f2f5;
+        }
+        
+        /* Эксперимент: меняем шрифт у body - повлияет на em */
+        body {
+            font-size: 16px;  /* стандартный размер, попробуй поменять на 20px */
+        }
+        
+        /* Эксперимент: меняем шрифт у html - повлияет на rem */
+        html {
+            font-size: 16px;  /* стандартный размер, попробуй поменять на 20px */
+        }
+        
+        h1 {
+            text-align: center;
+            color: #1a73e8;
+        }
+        
+        /* Общий стиль для всех блоков */
+        .box {
+            border: 1px solid #4caf50;
+            padding: 12px;
+            margin-bottom: 15px;
+            background: #fafaf7;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+        
+        /* Разные единицы измерения */
+        .size-px {
+            width: 200px;      /* фиксированная ширина в пикселях */
+        }
+        
+        .size-em {
+            width: 15em;       /* зависит от размера шрифта родителя (body) */
+        }
+        
+        .size-rem {
+            width: 12rem;      /* зависит от размера шрифта html */
+        }
+        
+        .size-percent {
+            width: 50%;        /* половина от родительского контейнера */
+        }
+        
+        .size-vw {
+            width: 30vw;       /* 30% от ширины окна браузера */
+        }
+        
+        .info {
+            background: #e8f0fe;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>📐 Эксперимент с единицами измерения в CSS</h1>
+
+<div class="box size-px">Блок 1 - width: 200px (фиксированный, не меняется)</div>
+<div class="box size-em">Блок 2 - width: 15em (зависит от шрифта body)</div>
+<div class="box size-rem">Блок 3 - width: 12rem (зависит от шрифта html)</div>
+<div class="box size-percent">Блок 4 - width: 50% (от ширины родителя)</div>
+<div class="box size-vw">Блок 5 - width: 30vw (30% от ширины окна браузера)</div>
+
+<div class="info">
+    <h3>🔬 Что нужно сделать:</h3>
+    <ul>
+        <li><strong>1. Измените размер окна браузера</strong> — блоки с % и vw будут менять ширину, а блок с px — нет.</li>
+        <li><strong>2. Откройте инспектор (F12) → найдите body → поменяйте font-size на 20px</strong> — блок с em вырастет.</li>
+        <li><strong>3. В инспекторе найдите html → поменяйте font-size на 20px</strong> — блок с rem вырастет.</li>
+    </ul>
+</div>
+
+</body>
+</html>

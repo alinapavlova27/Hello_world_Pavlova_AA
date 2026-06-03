@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Базовые селекторы CSS</title>
+    <style>
+        /* 1. Универсальный селектор * */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* 2. Селектор по тегу (body) */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        /* 3. Селектор по id (#title) */
+        #title {
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        /* 4. Селектор по классу (.lead) */
+        .lead {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2e7d32;
+            background: #e0f5e0;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        /* 5. Группировка через запятую (p, .lead - но они разные) */
+        /* Использую группировку для заголовков */
+        h1, h2, h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* 6. Селектор с двумя классами слитно (.box.highlight) */
+        .box.highlight {
+            background: #fff5e0;
+            border-left: 5px solid #ffa500;
+        }
+        
+        /* 7. Селектор с тремя классами (.box.highlight.large) */
+        .box.highlight.large {
+            font-size: 20px;
+            padding: 20px;
+            border: 2px solid #ffa500;
+        }
+        
+        /* Общие стили для блоков */
+        .box {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Стиль для обычного p */
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="title">Селекторы CSS</h1>
+
+<p>Это обычный абзац. Здесь нет дополнительных классов.</p>
+
+<p class="lead">Это важный абзац с классом lead. Он выделен зелёным фоном и жирным шрифтом.</p>
+
+<div class="box">Обычный блок с классом box</div>
+<div class="box highlight">Блок с классами box highlight (жёлтый фон + оранжевая полоса)</div>
+<div class="box highlight large">Блок с классами box highlight large (крупный шрифт и рамка)</div>
+
+</body>
+</html>

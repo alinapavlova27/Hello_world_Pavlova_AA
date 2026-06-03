@@ -1,0 +1,155 @@
+/* ════════ Переменные ════════ */
+:root {
+    --bg: #f0f2f5;
+    --card-bg: #ffffff;
+    --accent: #4C72B0;
+    --accent-dark: #2c4a7a;
+    --text: #1a1a2e;
+    --border: #e0e0dc;
+}
+
+/* ════════ Сброс и базовые стили ════════ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+/* ════════ Шапка ════════ */
+header {
+    background: var(--accent);
+    color: white;
+    padding: 24px 32px;
+}
+header h1 { font-size: 24px; margin-bottom: 6px; }
+header p  { opacity: 0.85; font-size: 14px; }
+
+/* ════════ Двухколоночная раскладка ════════ */
+.layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 24px;
+    padding: 24px 32px;
+    min-height: calc(100vh - 180px);
+}
+
+/* ════════ Сайдбар с кнопками ════════ */
+.controls {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 16px;
+    height: fit-content;
+}
+.controls h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #888;
+    margin: 16px 0 10px;
+    letter-spacing: 1px;
+}
+.controls h2:first-child { margin-top: 0; }
+
+/* ════════ Кнопки ════════ */
+.action-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    margin: 6px 0;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: left;
+    transition: all 0.2s;
+}
+.action-btn:hover {
+    background: var(--accent-dark);
+    transform: translateX(4px);
+}
+.action-btn.clear {
+    background: #d9534f;
+    margin-top: 24px;
+    text-align: center;
+}
+.action-btn.clear:hover {
+    background: #b73834;
+    transform: none;
+}
+
+/* ════════ Главная область результатов ════════ */
+main {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+}
+.placeholder {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 60px 0;
+}
+
+/* Карточка с числовой статистикой */
+.stat-card {
+    background: #f0f4f8;
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    padding: 28px 32px;
+    text-align: center;
+}
+.stat-card .label {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #666;
+    letter-spacing: 1px;
+}
+.stat-card .value {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--accent-dark);
+    margin-top: 12px;
+}
+
+/* Картинка с графиком */
+.chart-container {
+    text-align: center;
+}
+.chart-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Состояния загрузки / ошибки */
+.loading {
+    text-align: center;
+    color: #888;
+    padding: 50px 0;
+}
+.error {
+    background: #fff3f3;
+    border: 1px solid #d9534f;
+    color: #8b0000;
+    padding: 16px 20px;
+    border-radius: 8px;
+}
+
+/* ════════ Подвал ════════ */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+}

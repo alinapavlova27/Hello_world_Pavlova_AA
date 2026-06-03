@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Карточка товара</title>
+    <style>
+        /* ============================================
+           МНОГОСТРОЧНЫЙ КОММЕНТАРИЙ
+           Стили для карточки товара
+           Все приёмы CSS из задания
+           ============================================ */
+        
+        /* Правило с одним селектором по тегу - body */
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif; /* несколько шрифтов через запятую */
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        /* Правило с одним селектором по классу - .card */
+        .card {
+            background: white;
+            border-radius: 16px;
+            max-width: 350px;
+            width: 100%;
+        }
+        
+        /* Правило с несколькими селекторами через запятую */
+        h1, h2, h3 {
+            margin: 0 0 10px 0;
+        }
+        
+        /* Правило с двумя классами на одном элементе */
+        .card.product {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        
+        .card.product:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Правило с шорткатом padding (4 значения) */
+        .card-content {
+            padding: 20px 25px 30px 25px;  /* верх | право | низ | лево */
+        }
+        
+        /* Правило с шорткатом border */
+        .price {
+            border: 2px solid #ff6b35;     /* толщина | стиль | цвет */
+            background: #fff5e0;
+            padding: 8px 15px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: bold;
+        }
+        
+        /* Правило с цветом в HEX */
+        h2 {
+            color: #2c3e50;                /* сине-серый HEX */
+        }
+        
+        /* Правило с числом без единицы (line-height) */
+        .description {
+            color: #555;
+            line-height: 1.5;              /* число без единицы - умножается на размер шрифта */
+            margin-bottom: 20px;
+        }
+        
+        /* Стили для кнопки (дополнительно) */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: #ff6b35;  /* однострочный комментарий: оранжевый цвет кнопки */
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #e55a2b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card product">
+    <div class="card-content">
+        <h2>⭐ Беспроводные наушники</h2>
+        <p class="description">Высокое качество звука, активное шумоподавление, до 30 часов работы без подзарядки. Подходят для спорта и повседневного использования.</p>
+        <p class="price">4 990 ₽</p>
+        <br>
+        <button class="btn btn-primary">Купить</button>
+    </div>
+</div>
+
+</body>
+</html>
