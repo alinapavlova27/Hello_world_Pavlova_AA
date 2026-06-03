@@ -1,6 +1,0 @@
-weight = float(input("Введите вес (кг): "))
-height = float(input("Введите рост (м): "))
-bmi = weight / (height ** 2)
-print("--- Отчет о состоянии здоровья ---")
-print(f"Рост:\t{height} м\nВес:\t{weight}")
-print(f"Индекс массы тела: {bmi:.2f}")
